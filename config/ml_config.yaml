@@ -1,0 +1,10 @@
+available_models:
+  - intfloat/multilingual-e5-small
+  - intfloat/multilingual-e5-base
+  - Alibaba-NLP/gte-multilingual-base
+
+# Path to CTE catalog (relative to ML root)
+cte_csv_path: data/prep/CTE.csv
+
+# Directory where embedding .npy files are saved (relative to ML root)
+embeddings_dir: models/embeddings
