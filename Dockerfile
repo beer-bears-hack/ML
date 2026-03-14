@@ -16,7 +16,7 @@ RUN pip install --no-cache-dir --upgrade pip && \
 
 COPY . .
 
-EXPOSE 95
+EXPOSE 9593
 
-CMD ["uvicorn", "src.api.search_api:app", "--host", "0.0.0.0", "--port", "95"]
+CMD ["uvicorn", "src.api.search_api:app", "--host", "0.0.0.0", "--port", "9593"]
 
