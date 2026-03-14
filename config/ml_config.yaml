@@ -16,4 +16,6 @@ prep_contracts_path: data/prep/contracts.csv
 embeddings_dir: models/embeddings
 indexes_dir: models/indexes
 
-# prod_index_path: 
+prod_index_path: models/indexes/faiss_flat_(metric=ip)__intfloat_multilingual-e5-small.index
+prod_model_name: intfloat/multilingual-e5-small
+search_top_k: 10

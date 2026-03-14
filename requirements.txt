@@ -2,3 +2,10 @@ pandas
 numpy
 openpyxl
 PyYAML
+tqdm
+torch
+faiss-cpu
+sentence-transformers
+fastapi
+uvicorn
+pydantic
