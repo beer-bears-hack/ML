@@ -2,7 +2,7 @@ FROM python:3.11-slim
 
 WORKDIR /app
 
-ADD https://storage.yandexcloud.net/hackathon-perm-2026/cte_ids.npy ./models/indexes/cte_ids.npy
+ADD https://storage.yandexcloud.net/hackathon-perm-2026/cte_ids.npy ./models/embeddings/cte_ids.npy
 
 ADD https://storage.yandexcloud.net/hackathon-perm-2026/faiss_flat_(metric%3Dip)__intfloat_multilingual-e5-small.index  ./models/indexes/faiss_flat_(metric=ip)__intfloat_multilingual-e5-small.index
 
