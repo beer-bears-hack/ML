@@ -95,7 +95,7 @@ def encode_texts(
     device: str,
     batch_size: int = 64,
 ) -> np.ndarray:
-    model = SentenceTransformer(model_name, device=device)
+    model = SentenceTransformer(model_name, device=device, trust_remote_code=True)
     prepared = prepare_texts_for_model(model_name, texts)
 
     embeddings: list[np.ndarray] = []
