@@ -1,0 +1,9 @@
+services:
+  ml:
+    build:
+      dockerfile: Dockerfile
+      context: .
+    container_name: tender-hack-frontend
+    ports:
+      - "9593:9593"
+    restart: unless-stopped
