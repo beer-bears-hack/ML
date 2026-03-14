@@ -6,5 +6,14 @@ available_models:
 # Path to CTE catalog (relative to ML root)
 cte_csv_path: data/prep/CTE.csv
 
+raw_cte_path: data/raw/TenderHack_СТЕ_20260313.xlsx
+raw_contracts_path: data/raw/TenderHack_Контракты_20260313.xlsx
+
+prep_cte_path: data/prep/CTE.csv
+prep_contracts_path: data/prep/contracts.csv
+
 # Directory where embedding .npy files are saved (relative to ML root)
 embeddings_dir: models/embeddings
+indexes_dir: models/indexes
+
+# prod_index_path: 
