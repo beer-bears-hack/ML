@@ -209,3 +209,4 @@ __marimo__/
 /data/prep/*.csv
 /data/raw/*.xlsx
 /models/embeddings/*.npy
+models/indexes/*.index
