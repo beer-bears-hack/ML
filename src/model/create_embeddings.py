@@ -2,7 +2,7 @@ import argparse
 import sys
 from pathlib import Path
 from typing import Any, List
-
+from tqdm import tqdm
 import numpy as np
 import pandas as pd
 import torch
@@ -99,7 +99,7 @@ def encode_texts(
     prepared = prepare_texts_for_model(model_name, texts)
 
     embeddings: list[np.ndarray] = []
-    for i in range(0, len(prepared), batch_size):
+    for i in tqdm(range(0, len(prepared), batch_size)):
         batch = prepared[i : i + batch_size]
         with torch.no_grad():
             emb = model.encode(
