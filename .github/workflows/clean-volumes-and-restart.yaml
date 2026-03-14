@@ -1,0 +1,32 @@
+name: Deploy Docker Compose and clean volumes
+
+on:
+  workflow_dispatch:
+    inputs:
+      service:
+        description: 'Service to rebuild (empty = all)'
+        required: false
+        type: string
+
+jobs:
+  deploy:
+    runs-on: [self-hosted]
+    
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          clean: true
+          
+      - name: Redeploy
+        run: |          
+          docker-compose down -v
+          
+          # Build and start
+          if [ -n "${{ github.event.inputs.service }}" ]; then
+            docker-compose up -d --build ${{ github.event.inputs.service }}
+          else
+            docker-compose up -d --build
+          fi
+          
+          # Show status
+          docker-compose ps
